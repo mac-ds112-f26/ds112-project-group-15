@@ -1,5 +1,13 @@
 ---
-title: "Proposal"
+title: "proposal "
+subtitle: "Stat 112"
+author: "Daniel & Minna & Reg"
 ---
+## Reasons and Inspiration
 
-Your proposal go here.
+Choosing between a cat and a dog is a common question for people who want a pet, and shelters with limited space and resources face it from the other side. We want to know whether one species is more likely to be adopted, and whether adoptions change with the seasons or from place to place. Answering these questions could help shelters decide where to focus adoption efforts. 
+
+```{r include=FALSE}
+  longbeach <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-04/longbeach.csv')
+```
+
