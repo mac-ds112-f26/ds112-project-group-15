@@ -7,7 +7,50 @@ author: "Daniel & Minna & Reg"
 
 Choosing between a cat and a dog is a common question for people who want a pet, and shelters with limited space and resources face it from the other side. We want to know whether one species is more likely to be adopted, and whether adoptions change with the seasons or from place to place. Answering these questions could help shelters decide where to focus adoption efforts. 
 
+## Project Description
+
+This project uses public animal shelter records to compare adoption outcomes for cats and dogs. We will look at how adoption rates differ by species and how they change across seasons and locations, using data wrangling and visualizations in R.
+
+## Research Questions
+
+1. Are cats or dogs more likely to be adopted?
+2. How do adoption rates change across months and seasons?
+3. How do adoption rates vary by location (jurisdiction)?
+
+## Data Set
+
+We will use the **Long Beach Animal Shelter** dataset from [TidyTuesday (2025-03-04)](https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-04), originally from the City of Long Beach Animal Care Services. It has about 30,000 rows and 22 columns, and each row is one animal's intake and outcome record. Useful variables include `animal_type`, `outcome_type`, `intake_date`, `outcome_date`, `jurisdiction`, `latitude`, and `longitude`. We will define the adoption rate as the share of a group's outcomes that are adoptions.
+
 ```{r include=FALSE}
   longbeach <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-04/longbeach.csv')
 ```
+## Communication Plan
 
+- **Primary channel:** group chat (texting)
+- **Expected response time:** within 12 hours on weekdays
+- **Meeting time:** once a week, plus extra meetings before deadlines
+
+## Roles
+
+- **Point of contact:** Daniel
+- **Technical lead:** Minna
+- **Style lead:** Reg
+
+Everyone will contribute to the code, visualizations, and writing.
+
+## Conflict Resolution
+
+If a team member is going to miss a deadline, they should tell the group as early as possible, and the others will help or reassign the task. If someone repeatedly misses deadlines, we will talk about it as a group first and contact the instructor if it is still not resolved. If the team is split on a decision, we will talk through the pros and cons. If we still cannot agree, we will go with the option that is simpler to finish on time or ask the instructor or preceptors for advice.
+
+## Implementation Plan
+
+| Task | Due date | Lead |
+|---|---|---|
+| Finish proposal and choose dataset | Milestone 1 due date | All |
+| Load and clean data (dates, species, outcome types) | All |
+| Q1: compare cat vs. dog adoption rates  | All |
+| Q2: seasonal and monthly adoption trends  | All |
+| Q3: adoption rates by jurisdiction / map  | All |
+| Check code style and visualization quality | All |
+| Write up results and build the website | All |
+| Final presentation | All |
