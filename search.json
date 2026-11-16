@@ -1,0 +1,210 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project Title",
+    "section": "",
+    "text": "Your report goes here.\n\nCode# a test code chunk",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Report</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member1.html",
+    "href": "eda/eda-member1.html",
+    "title": "Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member2.html",
+    "href": "eda/eda-member2.html",
+    "title": "Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "eda/eda-member3.html",
+    "href": "eda/eda-member3.html",
+    "title": "Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Your exploratory data analysis of the team datasets go here.",
+    "crumbs": [
+      "EDA",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html",
+    "href": "appx/proposal.html",
+    "title": "Appendix A — Proposal",
+    "section": "",
+    "text": "Reasons and Inspiration\nChoosing between a cat and a dog is a common question for people who want a pet, and shelters with limited space and resources face it from the other side. We want to know whether one species is more likely to be adopted, and whether adoptions change with the seasons or from place to place. Answering these questions could help shelters decide where to focus adoption efforts.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#project-description",
+    "href": "appx/proposal.html#project-description",
+    "title": "Appendix A — Proposal",
+    "section": "Project Description",
+    "text": "Project Description\nThis project uses public animal shelter records to compare adoption outcomes for cats and dogs. We will look at how adoption rates differ by species and how they change across seasons and locations, using data wrangling and visualizations in R.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#research-questions",
+    "href": "appx/proposal.html#research-questions",
+    "title": "Appendix A — Proposal",
+    "section": "Research Questions",
+    "text": "Research Questions\n\nAre cats or dogs more likely to be adopted?\nHow do adoption rates change across months and seasons?\nHow do adoption rates vary by location (jurisdiction)?",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#data-set",
+    "href": "appx/proposal.html#data-set",
+    "title": "Appendix A — Proposal",
+    "section": "Data Set",
+    "text": "Data Set\nWe will use the Long Beach Animal Shelter dataset from TidyTuesday (2025-03-04), originally from the City of Long Beach Animal Care Services. It has about 30,000 rows and 22 columns, and each row is one animal’s intake and outcome record. Useful variables include animal_type, outcome_type, intake_date, outcome_date, jurisdiction, latitude, and longitude. We will define the adoption rate as the share of a group’s outcomes that are adoptions.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#communication-plan",
+    "href": "appx/proposal.html#communication-plan",
+    "title": "Appendix A — Proposal",
+    "section": "Communication Plan",
+    "text": "Communication Plan\n\n\nPrimary channel: group chat (texting)\n\nExpected response time: within 12 hours on weekdays\n\nMeeting time: once a week, plus extra meetings before deadlines",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#roles",
+    "href": "appx/proposal.html#roles",
+    "title": "Appendix A — Proposal",
+    "section": "Roles",
+    "text": "Roles\n\n\nPoint of contact: Daniel\n\nTechnical lead: Minna\n\nStyle lead: Reg\n\nEveryone will contribute to the code, visualizations, and writing.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#conflict-resolution",
+    "href": "appx/proposal.html#conflict-resolution",
+    "title": "Appendix A — Proposal",
+    "section": "Conflict Resolution",
+    "text": "Conflict Resolution\nIf a team member is going to miss a deadline, they should tell the group as early as possible, and the others will help or reassign the task. If someone repeatedly misses deadlines, we will talk about it as a group first and contact the instructor if it is still not resolved. If the team is split on a decision, we will talk through the pros and cons. If we still cannot agree, we will go with the option that is simpler to finish on time or ask the instructor or preceptors for advice.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/proposal.html#implementation-plan",
+    "href": "appx/proposal.html#implementation-plan",
+    "title": "Appendix A — Proposal",
+    "section": "Implementation Plan",
+    "text": "Implementation Plan\n\n\nTask\nDue date\nLead\n\n\n\nFinish proposal and choose dataset\nMilestone 1 due date\nAll\n\n\nLoad and clean data (dates, species, outcome types)\nAll\n\n\n\nQ1: compare cat vs. dog adoption rates\nAll\n\n\n\nQ2: seasonal and monthly adoption trends\nAll\n\n\n\nQ3: adoption rates by jurisdiction / map\nAll\n\n\n\nCheck code style and visualization quality\nAll\n\n\n\nWrite up results and build the website\nAll\n\n\n\nFinal presentation\nAll",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Proposal</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html",
+    "href": "appx/case-study.html",
+    "title": "Appendix B — Case Study",
+    "section": "",
+    "text": "How the story starts\nJan Diehm and Amber Thomas start with a problem that some jeans pockets are too small to hold everyday things. This gives readers a reason to care about the question the authors ask next: how much smaller are the pockets in women’s jeans? To find out, the authors measure pockets on 80 pairs of jeans from 20 brands.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html#how-the-graphs-tell-the-story",
+    "href": "appx/case-study.html#how-the-graphs-tell-the-story",
+    "title": "Appendix B — Case Study",
+    "section": "How the graphs tell the story",
+    "text": "How the graphs tell the story\nThe first graph shows the shape of each front pocket. As readers scroll, the graph highlights the average shape for men’s and women’s jeans. Showing the individual pockets first lets readers see how much they vary. The averages then make it easier to see that the pockets differ more in depth than in width.\nIn the next graph, readers can click on a phone, a wallet, or another item to see which pockets it fits in. This graph brings the story back to the problem at the start. Readers have already seen that women’s pockets are smaller. Now they can see how that difference affects what they can carry.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html#how-the-story-ends",
+    "href": "appx/case-study.html#how-the-story-ends",
+    "title": "Appendix B — Case Study",
+    "section": "How the story ends",
+    "text": "How the story ends\nThe authors then compare skinny and straight jeans. Women’s front pockets are smaller in both skinny and straight jeans. The difference between men’s and women’s jeans is much smaller for back pockets. At the end, the authors give a short history of pockets in women’s clothing and explain why it matters to be able to carry things and keep both hands free.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "appx/case-study.html#source",
+    "href": "appx/case-study.html#source",
+    "title": "Appendix B — Case Study",
+    "section": "Source",
+    "text": "Source\nJan Diehm and Amber Thomas. “Women’s Pockets Are Inferior.” The Pudding, August 2018.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Case Study</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member1.html",
+    "href": "wa/wa-member1.html",
+    "title": "Appendix C — Member 1 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>C</span>  <span class='chapter-title'>Member 1 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member2.html",
+    "href": "wa/wa-member2.html",
+    "title": "Appendix D — Member 2 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Member 2 First Name & Last Name Initial</span>"
+    ]
+  },
+  {
+    "objectID": "wa/wa-member3.html",
+    "href": "wa/wa-member3.html",
+    "title": "Appendix E — Member 3 First Name & Last Name Initial",
+    "section": "",
+    "text": "Work area to try code",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>E</span>  <span class='chapter-title'>Member 3 First Name & Last Name Initial</span>"
+    ]
+  }
+]
