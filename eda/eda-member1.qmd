@@ -34,7 +34,7 @@ adoption_rate |>
   ) +
   theme_minimal()
 ```
-Among records with a known outcome, 24.4% of cat outcomes and 26.2% of dog outcomes were adoptions. Dogs had a slightly higher adoption rate overall. I wanted to see whether this pattern changed depending on how the animals entered the shelter.
+24.4% of cat outcomes and 26.2% of dog outcomes were adoptions. Dogs had a slightly higher adoption rate overall. I wanted to see whether this pattern changed depending on how the animals entered the shelter.
 
 ## Does intake type matter?
 
