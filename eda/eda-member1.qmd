@@ -1,5 +1,85 @@
 ---
-title: "Member 1 First Name & Last Name Initial"
+title: "Ruige A"
 ---
 
-Your exploratory data analysis of the team datasets go here.
+## Question
+
+How do adoption rates compare between cats and dogs at the Long Beach animal shelter?
+
+```{r}
+library(tidyverse)
+longbeach <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-04/longbeach.csv")
+
+cats_dogs <- longbeach |>
+  filter(animal_type %in% c("cat", "dog"))
+```
+## Overall adoption rates
+
+```{r}
+adoption_rate <- cats_dogs |>
+  count(animal_type, outcome_type) |>
+  group_by(animal_type) |>
+  mutate(adoption_percent = 100 * n / sum(n)) |>
+  filter(outcome_type == "adoption")
+
+adoption_rate
+
+adoption_rate |>
+  ggplot(aes(x = animal_type, y = adoption_percent)) +
+  geom_col() +
+  labs(
+    title = "Adoption Rates for Cats and Dogs",
+    x = "Animal type",
+    y = "Adoption rate (%)"
+  ) +
+  theme_minimal()
+```
+24.4% of cat outcomes and 26.2% of dog outcomes were adoptions. Dogs had a slightly higher adoption rate overall. I wanted to see whether this pattern changed depending on how the animals entered the shelter.
+
+## Does intake type matter?
+
+```{r}
+intake_adoption <- cats_dogs |>
+  filter(intake_type %in% c("stray", "owner surrender")) |>
+  count(intake_type, animal_type, outcome_type) |>
+  group_by(intake_type, animal_type) |>
+  mutate(adoption_percent = 100 * n / sum(n)) |>
+  filter(outcome_type == "adoption")
+
+intake_adoption
+
+intake_adoption |>
+  ggplot(aes(x = animal_type, y = adoption_percent, fill = animal_type)) +
+  geom_col() +
+  facet_wrap(~ intake_type) +
+  labs(
+    title = "The pattern changed by intake type",
+    x = "Animal type",
+    y = "Adoption rate (%)"
+  ) +
+  theme_minimal()
+```
+Among strays, dogs had a higher adoption rate than cats, at 26.6% compared with 22.8%. Among animals surrendered by their owners, cats had a higher adoption rate, at 39.3% compared with 26.7%. This suggests that the overall comparison does not show the full picture.
+
+## What about other outcomes?
+
+The adoption rates were relatively close overall, so I compared the other outcomes for cats and dogs.
+
+```{r}
+cats_dogs |>
+  count(animal_type, outcome_type) |>
+  group_by(animal_type) |>
+  mutate(percent = 100 * n / sum(n)) |>
+  ggplot(aes(x = percent, y = outcome_type, fill = animal_type)) +
+  geom_col() +
+  facet_wrap(~ animal_type) +
+  labs(
+    title = "Outcome Distributions for Cats and Dogs",
+    x = "Percentage of records (%)",
+    y = "Outcome"
+  ) +
+  theme_minimal()
+```
+The most common outcome for cats is rescue, at about 28%, and the most common outcome for dogs is return to owner, at about 29%. Euthanasia also made up a larger share of cat records, at about 19%, compared with about 7% for dogs. Although their adoption rates were similar, cats and dogs had different rates in their other outcomes.
+
+Data source: [Long Beach Animal Shelter data from TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-04).

@@ -1,5 +1,23 @@
 ---
 title: "Case Study"
+subtitle: "Stat 112"
+author: "Daniel & Minna & Reg"
 ---
 
-Your case study go here.
+## How the story starts
+
+Jan Diehm and Amber Thomas start with a problem that some jeans pockets are too small to hold everyday things. This gives readers a reason to care about the question the authors ask next: how much smaller are the pockets in women's jeans? To find out, the authors measure pockets on 80 pairs of jeans from 20 brands.
+
+## How the graphs tell the story
+
+The first graph shows the shape of each front pocket. As readers scroll, the graph highlights the average shape for men's and women's jeans. Showing the individual pockets first lets readers see how much they vary. The averages then make it easier to see that the pockets differ more in depth than in width.
+
+In the next graph, readers can click on a phone, a wallet, or another item to see which pockets it fits in. This graph brings the story back to the problem at the start. Readers have already seen that women’s pockets are smaller. Now they can see how that difference affects what they can carry.
+
+## How the story ends
+
+The authors then compare skinny and straight jeans. Women's front pockets are smaller in both skinny and straight jeans. The difference between men's and women's jeans is much smaller for back pockets. At the end, the authors give a short history of pockets in women’s clothing and explain why it matters to be able to carry things and keep both hands free.
+
+## Source
+
+Jan Diehm and Amber Thomas. ["Women’s Pockets Are Inferior."](https://pudding.cool/2018/08/pockets/) *The Pudding*, August 2018.
