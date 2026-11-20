@@ -1,5 +1,116 @@
 ---
-title: "Member 2 First Name & Last Name Initial"
+title: "Daniel D"
 ---
 
-Your exploratory data analysis of the team datasets go here.
+## Question
+
+How do adoption rates for cats and dogs change by season at the Long Beach animal shelter?
+
+```{r}
+library(tidyverse)
+longbeach <- read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-03-04/longbeach.csv")
+
+cats_dogs <- longbeach |>
+  filter(animal_type %in% c("cat", "dog")) |>
+  mutate(
+    intake_month = month(intake_date, label = TRUE),
+    intake_year = year(intake_date),
+    season = case_when(
+      intake_month %in% c("Dec", "Jan", "Feb") ~ "Winter",
+      intake_month %in% c("Mar", "Apr", "May") ~ "Spring",
+      intake_month %in% c("Jun", "Jul", "Aug") ~ "Summer",
+      intake_month %in% c("Sep", "Oct", "Nov") ~ "Fall"
+    ),
+    season = factor(season, levels = c("Winter", "Spring", "Summer", "Fall"))
+  )
+```
+
+I grouped animals by the month they arrived at the shelter (`intake_date`) and used that to create a season variable.
+
+## When do animals arrive?
+
+```{r}
+cats_dogs |>
+  count(animal_type, intake_month) |>
+  ggplot(aes(x = intake_month, y = n, color = animal_type, group = animal_type)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Cat intakes spike in late spring",
+    x = "Month of intake",
+    y = "Number of animals",
+    color = "Animal type"
+  ) +
+  theme_minimal()
+```
+
+Dog intakes stay fairly steady all year, at about 700 to 900 per month. Cat intakes jump from about 600 in winter to about 1,800 in May and June, probably because of kitten season. This means the shelter has many more cats to place in late spring and summer.
+
+## Adoption rates by season
+
+```{r}
+season_adoption <- cats_dogs |>
+  count(season, animal_type, outcome_type) |>
+  group_by(season, animal_type) |>
+  mutate(adoption_percent = 100 * n / sum(n)) |>
+  filter(outcome_type == "adoption")
+
+season_adoption
+
+season_adoption |>
+  ggplot(aes(x = season, y = adoption_percent, fill = animal_type)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "Animals arriving in winter were adopted the least",
+    x = "Season of intake",
+    y = "Adoption rate (%)",
+    fill = "Animal type"
+  ) +
+  theme_minimal()
+```
+
+For both cats and dogs, animals that arrived in winter had the lowest adoption rate (22.1% for cats and 22.7% for dogs). Dogs did best in summer (29.3%) and cats did best in fall (26.1%). Dogs had a higher adoption rate than cats in every season, but the gap was largest in summer.
+
+## Does the pattern hold over the years?
+
+```{r}
+cats_dogs |>
+  count(intake_year, animal_type, outcome_type) |>
+  group_by(intake_year, animal_type) |>
+  mutate(adoption_percent = 100 * n / sum(n)) |>
+  filter(outcome_type == "adoption") |>
+  ggplot(aes(x = intake_year, y = adoption_percent, color = animal_type)) +
+  geom_line() +
+  geom_point() +
+  labs(
+    title = "Adoption rates rose a lot after 2018",
+    x = "Year of intake",
+    y = "Adoption rate (%)",
+    color = "Animal type"
+  ) +
+  theme_minimal()
+```
+
+Adoption rates were only about 12% for both animals in 2017 and 2018, then rose to about 39% for cats and 42% for dogs in 2022. This change over the years is much bigger than the differences between seasons, so I checked whether the winter pattern still shows up in recent years.
+
+```{r}
+cats_dogs |>
+  filter(intake_year >= 2022) |>
+  count(season, animal_type, outcome_type) |>
+  group_by(season, animal_type) |>
+  mutate(adoption_percent = 100 * n / sum(n)) |>
+  filter(outcome_type == "adoption") |>
+  ggplot(aes(x = season, y = adoption_percent, fill = animal_type)) +
+  geom_col(position = "dodge") +
+  labs(
+    title = "Winter is still the lowest season in 2022-2024",
+    x = "Season of intake",
+    y = "Adoption rate (%)",
+    fill = "Animal type"
+  ) +
+  theme_minimal()
+```
+
+From 2022 to 2024, winter was still clearly the lowest season (26.9% for cats and 32.1% for dogs), while the other seasons were all around 35% to 46%. So the seasonal pattern is not just caused by the change over the years. In our final report, we should mention the yearly trend when we talk about seasons.
+
+Data source: [Long Beach Animal Shelter data from TidyTuesday](https://github.com/rfordatascience/tidytuesday/tree/main/data/2025/2025-03-04).
